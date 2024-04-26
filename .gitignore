@@ -1,0 +1,8 @@
+예전파일/
+gguf/
+llama.cpp/
+outputs/
+pretrained/
+*.ipynb
+.cache/
+cache/
