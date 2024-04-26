@@ -16,18 +16,19 @@ from langserve import RemoteRunnable
 from make_rag_docs import get_rag_data1
 from filter_data import *
 
+
+# ChatGPT 사용시 api-key필요
 from langchain_openai import ChatOpenAI
 import toml
 config = toml.load('.secret/secrets.toml')
-
 api_key = config['OPENAI_API_KEY']
 
 
-# ⭐️ Embedding 설정
+# Embedding 설정
 USE_BGE_EMBEDDING = True
 
 
-# ⭐️ LangServe 모델 설정(EndPoint)
+# LangServe 모델 설정(EndPoint)
 # ngrok http --domain=quick-alien-cunning.ngrok-free.app 8000
 LANGSERVE_ENDPOINT = "https://quick-alien-cunning.ngrok-free.app/llm/"
 
@@ -174,39 +175,29 @@ if user_input := st.chat_input():
     with st.chat_message("assistant"):
         # ngrok remote 주소 설정
         llm = RemoteRunnable(LANGSERVE_ENDPOINT)
+        
+        # GPT사용시 llm교체
         # llm = ChatOpenAI(model='gpt-4', openai_api_key = api_key)
         chat_container = st.empty()
-        
-        print('categories')
-        # print(search_cate1, search_cate2, search_cate3)
-        # user_input += ' '
-        # if search_cate1 : user_input += search_cate1
-        # if search_cate2 : user_input += search_cate2
-        # if search_cate3 : user_input += search_cate3
         
         with st.spinner("Searching DnF Homepage article..."):
             if search_cate1 != '':
                 if search_cate1 == '공략':
-                    print('123 kwarg')
                     retriever = embed_file(embedding, 
                                        category1 = search_cate1, 
                                        category2 = search_cate2, 
                                        category3 = search_cate3,
                                        )
                 else:
-                    print('13 kwarg')
                     retriever = embed_file(embedding, 
                                        category1 = search_cate1, 
                                        category3 = search_cate3, 
                                        )
             else:
-                print('None kwarg')
                 retriever = embed_file(embedding)
-            # retriever = embed_file(embedding)
         
-        
-        print(user_input)
-        # st.write(retriever.invoke(user_input))
+        # RAG 결과 출력
+        # st.write(retriever.invoke(user_input)) 
         
         prompt = ChatPromptTemplate.from_template(RAG_PROMPT_TEMPLATE)
         
@@ -214,9 +205,7 @@ if user_input := st.chat_input():
             # 체인을 생성합니다.
             rag_chain = (
                 {
-                    # "context" : lambda x : format_docs(docs),
                     "context": retriever | format_docs,
-                    # 'context' : lambda x : '',
                     "question": RunnablePassthrough(),
                 }
                 | prompt
