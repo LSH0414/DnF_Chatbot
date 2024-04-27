@@ -3,7 +3,7 @@
 
 <h3> 24.04.20 Update</h3>
 
-기존에 진행했던 [polyglot기반 챗봇](https://github.com/LSH0414/Project/tree/master/DnF_Chatbot)은 RAG를 구현하기 어려워, QA데이터를 기반으로 [EEVE-10.8b](https://huggingface.co/yanolja/EEVE-Korean-Instruct-10.8B-v1.0)에 SFT를 진행하였습니다.
+기존에 진행했던 [polyglot기반 챗봇](https://github.com/LSH0414/Project/tree/master/DnF_Chatbot)은 RAG를 구현하기 어려워,  [EEVE-10.8b](https://huggingface.co/yanolja/EEVE-Korean-Instruct-10.8B-v1.0)에 SFT를 새롭게 진행하였습니다.
 
 모델의 훈련 데이터는 이전 RLHF-PPO 과정에서 사용한 데이터와 동일하나 챗봇 데이터로 변환해 미세조정하였습니다. EEVE모델은 한국어 중심 모델이며, RAG 프롬프트에 대응할 수 있는 모델입니다.
 
