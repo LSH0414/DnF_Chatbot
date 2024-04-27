@@ -22,7 +22,7 @@ RAG로 활용되는 데이터는 아래 두 페이지에 있는 글을 수집하
   - Overlap : 250<br/>
   - Retriever : Ensembel Retriever<br/>
   - VectorStore : FAISS<br/>
-  - Embedding Model : BAAI/bge-m3<br/>
+  - Embedding Model : <a href = 'https://huggingface.co/BAAI/bge-m3'>BAAI/bge-m3</a> <br/>
   - Data</br>
   <ul>
   - 공식 홈페이지 글 : 156개</br>
