@@ -20,8 +20,8 @@ RAG로 활용되는 데이터는 아래 두 페이지에 있는 글을 수집하
 <ul>
   - Chunk : 3,000<br/>
   - Overlap : 250<br/>
-  - Retriever : Ensembel Retriever
-  - VectorStore : FAISS
+  - Retriever : Ensembel Retriever<br/>
+  - VectorStore : FAISS<br/>
   - Embedding Model : BAAI/bge-m3<br/>
   - Data</br>
   <ul>
