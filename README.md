@@ -3,7 +3,7 @@
 
 <h3> 24.04.20 Update</h3>
 
-기존에 polyglot1.3b 모델에 RLHF - PPO 학습된 모델을 통해 RAG를 구현하기 어려워, QA데이터를 기반으로 [EEVE-10.8b](https://huggingface.co/yanolja/EEVE-Korean-Instruct-10.8B-v1.0)에 SFT를 진행하였습니다.
+기존에 진행했던 [polyglot기반 챗봇](https://github.com/LSH0414/Project/tree/master/DnF_Chatbot)은 RAG를 구현하기 어려워, QA데이터를 기반으로 [EEVE-10.8b](https://huggingface.co/yanolja/EEVE-Korean-Instruct-10.8B-v1.0)에 SFT를 진행하였습니다.
 
 RAG로 활용되는 데이터는 아래 두 페이지에 있는 글을 수집하여 진행하였습니다.
 - [던전앤파이터 공식 홈페이지 커뮤니티 공략글](https://df.nexon.com/community/dnfboard/article/2760672?category=0)
