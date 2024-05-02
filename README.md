@@ -55,8 +55,6 @@ https://github.com/LSH0414/Project/assets/119479455/8cff1b25-b580-43a2-a714-f676
 
 
 
-----
-
 <br><br>
 
 
@@ -100,5 +98,10 @@ bge-m3을 베이스 모델로 2만개의 질문글을 바탕으로 7만 9천개�
 
 
 </br></br>
+
+---
+
+[Note]
+
 훈련 모델은 gguf 파일로 huggingface에 공유 예정입니다.
 
