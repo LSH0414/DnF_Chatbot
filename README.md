@@ -3,14 +3,14 @@
 <h3> Updates </h3>
 
 <ul>
-<h4> 24.05.02 Update </h4>
+<h4> [24.05.02 Update] </h4>
 
-기존 임베딩 모델인 bge-m3에 던전앤파이터 QA 데이터를 학습시켜 임베딩 모델을 [DNF-bge-m3](https://huggingface.co/COCO0414/bge-m3_finetune_dnf)로 업데이트 하였습니다. DNF-bge-m3는 던전앤파이터 공식 홈페이지에 있는 질문 게시판 데이터를 기반으로 훈련된 데이터로 던전앤파이터와 관련 텍스트를 위한 임베딩 모델입니다.
+기존 임베딩 모델인 bge-m3에 던전앤파이터 QA 데이터를 학습시켜 임베딩 모델을 [DNF-bge-m3](https://huggingface.co/COCO0414/bge-m3_finetune_dnf)로 업데이트 하였습니다. DNF-bge-m3는 던전앤파이터 공식 홈페이지에 있는 질문 게시판 데이터를 기반으로 훈련된 데이터로, 던전앤파이터와 관련 있는 텍스트를 잘 표현하는 임베딩 모델입니다.
 
 </ul>
 
 <ul>
-<h4> 24.04.20 Update </h4>
+<h4> [24.04.20 Update] </h4>
 
 기존에 진행했던 [polyglot기반 챗봇](https://github.com/LSH0414/Project/tree/master/DnF_Chatbot)은 RAG를 구현하기 어려워,  [EEVE-10.8b](https://huggingface.co/yanolja/EEVE-Korean-Instruct-10.8B-v1.0)에 SFT를 새롭게 진행하였습니다.
 
